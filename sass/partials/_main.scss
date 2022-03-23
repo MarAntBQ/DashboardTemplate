@@ -1,0 +1,143 @@
+main {
+    width: 100%;
+    margin-left: 250px;
+    transition: 0.3s;
+
+    @media (max-width: $break-medium) {
+        margin-left: 0px;
+        margin-top: 70px;
+    }
+
+    &.darkmode {
+        @media (max-width: $break-medium) {
+            background: rgba(255, 254, 254, 0.842);
+            filter: blur(1.5px);
+        }
+    }
+
+    background: #E6E7E8;
+    min-height: 100vh;
+    padding: 30px 10px;
+
+    .dash-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 0px 15px;
+
+        @media (max-width: $break-small) {
+            flex-wrap: wrap;
+        }
+
+        a {
+            display: block;
+            width: 200px;
+            min-width: 200px;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: left;
+            color: $color9;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color10;
+            }
+
+            @media (max-width: $break-small) {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        .input-ctnr {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            button {
+                background: $color9;
+
+                width: 35px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 13px;
+                border: 0px;
+                transition: 0.3s;
+
+                &:hover {
+                    background: $color10;
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                height: 35px;
+                border: 0px;
+                font-family: inherit;
+                color: $color2;
+            }
+        }
+    }
+
+    .dashbox {
+        //min-height: 25vh;
+        background: white;
+        color: $color2;
+        padding: 15px 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-shadow: 0 3px 7px 0 rgb(0 0 0 / 12%), inset 0 -1px 0 0 #dadce0;
+
+        h2 {
+            color: $color9;
+            width: 100%;
+            text-align: center;
+        }
+        hr {
+            width: 100%;
+            margin: 15px auto;
+            border: 1px solid $color10;
+        }
+        @mixin btnsettings {
+            display: block;
+            margin: 10px auto;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+            width: 100%;
+        }
+        .btn-center-1 {
+            @include btnsettings;
+            background: $color4;
+            color: white;
+            &:hover {
+                background: $color1;
+            }
+        }
+        .btn-center-2 {
+            @include btnsettings;
+            background: $color6;
+            color: white;
+            &:hover {
+                background: $color1;
+            }
+        }
+        .btn-center-3 {
+            @include btnsettings;
+            background: $color7;
+            color: white;
+            &:hover {
+                background: $color1;
+            }
+        }
+    }
+
+}

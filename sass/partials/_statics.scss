@@ -1,0 +1,22 @@
+.statics {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0px;
+        .left {
+
+        }
+        .right {
+            background: $color7;
+            color: white;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 25px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Dashboard Template</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="./" class="logo-ctnr"><img src="img/logo.png" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-ship"></i> Embarcaciones <span class="notification-counter">2</span></a>
+                </li>
+                <li><a href="#"><i class="fas fa-male"></i> Capitanes</a></li>
+                <li><a href="#"><i class="fas fa-book-open"></i> Bitacora</a></li>
+                <li><a href="#"><i class="fas fa-fish"></i> Lances</a></li>
+                <!-- <li><a href="#"><i class="fas fa-user"></i> Profile <span class="notification-counter">3</span></a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li> -->
+            </ul>
+        </nav>
+        <a href="#" class="logout-btn">CERRA SESIÓN &nbsp;<i class="fas fa-power-off"></i></a>
+    </header>
+    <div id="responsive-nav">
+        <a href="./" class="logo-ctnr"><img src="https://altura.com.ec/wp-content/uploads/2020/09/altura-final-grande.png" alt=""></a>
+        <i class="fas fa-bars" id="menu-btn"></i>
+    </div>
+    <main>
+        <div class="dash-nav">
+            <a href="./"><i class="fas fa-home"></i> Dashboard</a></a>
+            <div class="input-ctnr">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="flex-s-a flex-v-f-s">
+            <!-- Left Part -->
+            <div class="flex-s-a box-9 box-i-12 box-m-12 ml5px mr5px">
+                <div class="dashbox w100p p10px">
+                    <div id="container1" class="w100p"></div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const chart = Highcharts.chart('container1', {
+                                chart: {
+                                    type: 'line',
+                                    height: (9 / 16 * 100) + '%'
+                                },
+                                title: {
+                                    text: 'Resumen de Embarcaciones'
+                                },
+                                xAxis: {
+                                    minPadding: 0.05,
+                                    maxPadding: 0.05
+                                },
+                                yAxis: {
+                                    title: {
+                                        text: ''
+                                    }
+                                },
+                                credits: {
+                                    //enabled: false
+                                    text: 'Marco Antonio Bustillos Quiroz',
+                                    href: 'https://fullstackwebdeveloper.xyz/'
+                                },
+                                series: [{
+                                    showInLegend: false,
+                                    name: 'Embarcaciones',
+                                    colorByPoint: true,
+                                    data: [
+                                        [1, 5],
+                                        [2, 7],
+                                        [4, 1],
+                                        [5, 6],
+                                        [6, 4],
+                                        [7, 3],
+                                        [8, 2],
+                                    ]
+                                }]
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="w100p flex-s-b flex-m-s-a mt15px">
+                    <div class="dashbox box-4 box-i-6 box-p-12 flex-vc">
+                        <h2 class="tac">Lorem, ipsum.</h2>
+                        <hr>
+                        <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                            style="--value:70"></div>
+                        <a href="#" class="btn-center-1">Lorem, ipsum.</a>
+                    </div>
+                    <div class="dashbox box-4 box-i-6 box-p-12 flex-vc">
+                        <h2 class="tac">Lorem, ipsum.</h2>
+                        <hr>
+                        <div id="container2" class="w100p"></div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const chart = Highcharts.chart('container2', {
+                                    chart: {
+                                        height: '100%',
+                                        type: 'line'
+                                    },
+                                    title: {
+                                        text: '',
+                                    },
+                                    xAxis: {
+                                        categories: ['Jan', 'Feb', 'March', 'April', 'June', 'July',
+                                            'August'
+                                        ]
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: ''
+                                        }
+                                    },
+                                    credits: {
+                                        enabled: false
+                                    },
+                                    series: [{
+                                        name: 'Your Saving',
+                                        colorByPoint: true,
+                                        showInLegend: false,
+                                        data: [10, 20, 1, 25, 60, 40, 20]
+                                    }, {
+                                        name: 'Your Spending',
+                                        colorByPoint: true,
+                                        showInLegend: false,
+                                        data: [8, 15, 2, 30, 20, 10, 15]
+                                    }]
+                                });
+                            });
+                        </script>
+                        <a href="#" class="btn-center-2">Lorem, ipsum.</a>
+                    </div>
+                    <div class="dashbox box-4 box-i-6 box-p-12 flex-vc">
+                        <h2 class="tac">Lorem, ipsum.</h2>
+                        <hr>
+                        <div id="container3" class="w100p"></div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const chart = Highcharts.chart('container3', {
+                                    title: {
+                                        text: ''
+                                    },
+                                    chart: {
+                                        height: '100%',
+                                        type: 'column'
+                                    },
+                                    xAxis: {
+                                        categories: ['Rojo', 'Verde', 'Negro']
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: ''
+                                        }
+                                    },
+                                    credits: {
+                                        enabled: false
+                                    },
+                                    series: [{
+                                        showInLegend: false,
+                                        data: [{
+                                                name: 'Color 1',
+                                                color: '#ff0031',
+                                                y: 2
+                                            }, {
+                                                name: 'Color 2',
+                                                color: '#28a745',
+                                                y: 5
+                                            },
+                                            {
+                                                name: 'Color 1',
+                                                color: 'black',
+                                                y: 3
+                                            }
+                                        ]
+                                    }]
+                                });
+                            });
+                        </script>
+                        <a href="#" class="btn-center-3">Lorem, ipsum.</a>
+                    </div>
+                    <div class="dashbox box-6 box-p-12 flex-vc">
+                        <h2>Lorem, ipsum.</h2>
+                        <hr>
+                        <div class="w100p progress-lines">
+                            <p>Lorem, ipsum.</p>
+                            <p class="line"><span class="c1 w80p"></span></p>
+                            <p>Lorem, ipsum.</p>
+                            <p class="line"><span class="c2 w50p"></span></p>
+                            <p>Lorem, ipsum.</p>
+                            <p class="line"><span class="c3 w60p"></span></p>
+                            <p>Lorem, ipsum.</p>
+                            <p class="line"><span class="c4 w78p"></span></p>
+                        </div>
+                        <a href="#" class="btn-center-1">Lorem, ipsum.</a>
+                    </div>
+                    <div class="dashbox box-6 box-p-12 flex-vc">
+                        <h2>Lorem, ipsum.</h2>
+                        <hr>
+                        <div class="w100p mauto">
+                            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_bewdaxyv.json"
+                                background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>
+                        </div>
+                        <a href="#" class="btn-center-2">Lorem, ipsum.</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Left Part -->
+            <!-- Right Part -->
+            <div class="dashbox box-4 box-i-12">
+                <h2>Resumen</h2>
+                <hr>
+                <div class="statics">
+                    <div class="row">
+                        <p class="left">Lorem, ipsum.</p>
+                        <p class="right">634</p>
+                    </div>
+                    <div class="row">
+                        <p class="left">Lorem, ipsum.</p>
+                        <p class="right">20</p>
+                    </div>
+                    <div class="row">
+                        <p class="left">Lorem, ipsum.</p>
+                        <p class="right">30</p>
+                    </div>
+                    <div class="row">
+                        <p class="left">Lorem, ipsum.</p>
+                        <p class="right">198</p>
+                    </div>
+                    <div class="row">
+                        <p class="left">Lorem, ipsum.</p>
+                        <p class="right">520</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h2>Progreso Mensual</h2>
+                <hr>
+                <div id="container4" class="w100p"></div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const chart = Highcharts.chart('container4', {
+                            chart: {
+                                type: 'column'
+                            },
+                            title: {
+                                text: ''
+                            },
+                            xAxis: {
+                                type: 'category'
+                            },
+                            yAxis: {
+                                title: {
+                                    text: ''
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            series: [{
+                                showInLegend: false,
+                                name: 'Moviles',
+                                colorByPoint: true,
+                                data: [{
+                                    name: 'Samsung',
+                                    y: 5,
+                                    drilldown: 'samsung'
+                                }, {
+                                    name: 'Xiaomi',
+                                    y: 6,
+                                    drilldown: 'xiaomi'
+                                }, {
+                                    name: 'Motorola',
+                                    y: 4,
+                                    drilldown: 'motorola'
+                                }]
+                            }, {
+                                showInLegend: false,
+                                name: 'Laptops',
+                                colorByPoint: true,
+                                data: [{
+                                    name: 'HP',
+                                    y: 2,
+                                    drilldown: 'hp'
+                                }, {
+                                    name: 'Sony',
+                                    y: 1,
+                                    drilldown: 'sony'
+                                }]
+                            }],
+                            drilldown: {
+                                series: [{
+                                    id: 'samsung',
+                                    colorByPoint: true,
+                                    showInLegend: false,
+                                    name: 'Telefonos Samsung',
+                                    data: [
+                                        ['Samsung Galaxy S', 3],
+                                        ['Samsung Galaxy S8', 1],
+                                        ['Samsung Galaxy S9', 1]
+                                    ]
+                                }, {
+                                    id: 'xiaomi',
+                                    colorByPoint: true,
+                                    showInLegend: false,
+                                    name: 'Telefonos Xiaomi',
+                                    data: [
+                                        ['Readmi 9C', 2],
+                                        ['Xiaomi Redmi Note 9', 3],
+                                        ['Xiaomi Note 10s', 1]
+                                    ]
+                                }, {
+                                    id: 'motorola',
+                                    colorByPoint: true,
+                                    showInLegend: false,
+                                    name: 'Telefonos Motorola',
+                                    data: [
+                                        ['Racer 1', 1],
+                                        ['Racer 2', 1],
+                                        ['Racer 3', 1],
+                                        ['Racer 4', 1]
+                                    ]
+                                }, {
+                                    id: 'hp',
+                                    colorByPoint: true,
+                                    showInLegend: false,
+                                    name: 'Laptops HP',
+                                    data: [
+                                        ['Pro Home', 1],
+                                        ['Pavilon', 1]
+                                    ]
+                                }, {
+                                    id: 'sony',
+                                    colorByPoint: true,
+                                    showInLegend: false,
+                                    name: 'Laptops Sony',
+                                    data: [
+                                        ['Vaio', 1]
+                                    ]
+                                }]
+                            }
+                        });
+                    });
+                </script>
+                <br>
+                <h2 class="tac">Lorem, ipsum.</h2>
+                <hr>
+                <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                    style="--value:60"></div>
+            </div>
+        </div>
+        <footer class="mt20px">
+            <strong>&copy; 2021 Marbust Technology Company - All Rights Reserved</strong>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>

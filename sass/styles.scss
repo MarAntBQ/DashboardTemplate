@@ -1,0 +1,22 @@
+@import 'Design-Framework/design-framework';
+
+$color1: #1D262D;
+$color2: #939598;
+$color3: #222C33;
+$color4: #39B54A;
+$color5: #808285;
+$color6: #2B9EB3;
+$color7: #FCAB10;
+$color8: #F8333C;
+$color9: rgb(10, 26, 64);
+$color10: #12a8d3;
+
+/* AFilo Dashboard */
+@import 'partials/layout';
+@import 'partials/fonts';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/nav';
+@import 'partials/progress-bar-circle';
+@import 'partials/progress-lines';
+@import 'partials/statics';

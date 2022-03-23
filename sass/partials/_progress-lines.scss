@@ -1,0 +1,32 @@
+.progress-lines {
+    p {
+        margin: 10px 0px;
+    }
+
+    .line {
+        background: $color2;
+        height: 15px;
+        border-radius: 10px;
+        $linec1: #39B54A;
+        $linec2: #2B9EB3;
+        $linec3: #FCAB10;
+        $linec4: #F8333C;
+        span {
+            border-radius: 10px;
+            display: block;
+            height: 15px;
+        }
+        .c1 {
+            background: $linec1;
+        }
+        .c2 {
+            background: $linec2;
+        }
+        .c3 {
+            background: $linec3;
+        }
+        .c4 {
+            background: $linec4;
+        }
+    }
+}
